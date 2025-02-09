@@ -1,17 +1,6 @@
-import os
-
 from flask import Flask, render_template, redirect, url_for, request, send_from_directory
 
-def is_active(endpoint):
-    return "active" if request.endpoint == endpoint else ""
-
-# Register it in Jinja
-def register_filters(rel_app):
-    rel_app.jinja_env.globals.update(is_active=is_active)
-
-# In your Flask app setup
 app = Flask(__name__, static_folder='static')
-register_filters(app)
 
 @app.route('/')
 def home():
