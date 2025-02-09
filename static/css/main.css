@@ -21,8 +21,9 @@
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #2f3138; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #0e1b4d; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #f82249; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --heading-color: #7FC1BB; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #F4833C; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --anchor-color: #F35A89;
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -33,8 +34,8 @@
   --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #f82249; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-color: #F4833C; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #F35A89; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -48,7 +49,7 @@
   --background-color: #000820;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #001553;
+  --surface-color: #7FC1BB;
   --contrast-color: #ffffff;
 }
 
@@ -67,7 +68,7 @@ body {
 }
 
 a {
-  color: var(--accent-color);
+  color: var(--anchor-color);
   text-decoration: none;
   transition: 0.3s;
 }
@@ -83,7 +84,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--heading-color);
+  color: var(--accent-color);
   font-family: var(--heading-font);
 }
 
@@ -641,7 +642,7 @@ h6 {
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--accent-color);
+  color: var(--heading-color);
 }
 
 .footer .footer-contact p {
@@ -854,7 +855,7 @@ section,
   display: block;
   width: 50px;
   height: 3px;
-  background: var(--accent-color);
+  background: var(--heading-color);
   left: 0;
   right: 0;
   bottom: 0;
@@ -1046,9 +1047,11 @@ section,
 .schedule .nav-tabs {
   text-align: center;
   margin: auto;
-  display: block;
+  display: flex; /* Use flexbox to keep all buttons in one line */
+  justify-content: center; /* Center the buttons */
   border-bottom: 0;
   margin-bottom: 30px;
+  gap: 10px; /* Add a small gap between buttons */
 }
 
 .schedule .nav-tabs li {
@@ -1058,28 +1061,22 @@ section,
 
 .schedule .nav-tabs a {
   border: none;
-  border-radius: 50px;
+  border-radius: 30px; /* Slightly smaller border-radius for a cleaner look */
   font-weight: 600;
   background-color: var(--heading-color);
   color: var(--contrast-color);
-  padding: 10px 100px;
+  padding: 8px 30px; /* Reduce padding for better fit */
+  font-size: 14px; /* Adjust font size if necessary */
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 @media (max-width: 991px) {
-  .schedule .nav-tabs a {
-    padding: 8px 60px;
+  .schedule .nav-tabs {
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 5px; /* Reduce gap for compact spacing */
   }
-}
-
-@media (max-width: 767px) {
   .schedule .nav-tabs a {
-    padding: 8px 50px;
-  }
-}
-
-@media (max-width: 480px) {
-  .schedule .nav-tabs a {
-    padding: 8px 30px;
+    padding: 6px 20px; /* Reduce padding on smaller screens */
   }
 }
 
@@ -1687,4 +1684,30 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+.role-option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--heading-color);
+  color: white;
+  border-radius: 20px;
+  padding: 50px;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  transition: 0.3s;
+  height: 200px; /* Make it big */
+}
+
+.role-option i {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.role-option:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
 }
