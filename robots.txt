@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+Disallow: /tmp/
+Allow: /
+
+Sitemap: https://atpis.me/sitemap.xml
