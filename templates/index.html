@@ -6,8 +6,8 @@
       <img src="{{ url_for('static', filename='img/hero-bg.jpg') }}" alt="" data-aos="fade-in" class="">
 
       <div class="container d-flex flex-column align-items-center text-center mt-auto">
-        <h2 data-aos="fade-up" data-aos-delay="100" class="">BEIRUT MODEL UNITED NATIONS</h2>
-        <p data-aos="fade-up" data-aos-delay="200">American University of Beirut, Lebanon</p>
+          <h2 data-aos="fade-up" data-aos-delay="100" style="line-height: 0.6">BEIRUT MODEL <span class="d-block d-lg-none"><br></span><span style="font-weight: 400">UNITED NATIONS</span></h2>
+          <p data-aos="fade-up" data-aos-delay="200" style="line-height: 0.6">Official MUN Conference of the <span class="d-block d-md-none"><br></span>American University of Beirut</p>
         <div data-aos="fade-up" data-aos-delay="300" class="">
           <a href="https://vimeo.com/1055030683" class="glightbox pulsating-play-btn mt-3"></a>
         </div>
@@ -22,12 +22,12 @@
               <p>Beirut Model United Nations (BEYMUN) is an international Model UN conference held in Beirut, Lebanon. The conference provides a platform for students to engage in diplomatic simulations, fostering a strong MUN culture and promoting student participation in recreational, social and cultural activities. More on that <a href="{{ url_for('about_us') }}">here</a>.</p>
             </div>
             <div class="col-lg-3">
-              <h3>Where</h3>
-              <p><a href="https://aub.edu.lb">American University of Beirut</a><br>Beirut, Lebanon</p>
+{#              <h3>Where</h3>#}
+{#              <p><a href="https://aub.edu.lb">American University of Beirut</a><br>Beirut, Lebanon</p>#}
             </div>
             <div class="col-lg-3">
               <h3>When</h3>
-              <p>Conference: Saturday 12 and Sunday 13 April 2025<br>Training sessions timing below</p>
+              <p>Conference: Saturday 12 and Sunday 13 April 2025<br>Training sessions timing <a href="{{ url_for('beymun_2025') }}">here</a></p>
             </div>
           </div>
         </div>
@@ -147,7 +147,7 @@
               <div class="col-11 col-lg-8 position-relative">
                 <h3>American University of Beirut, Lebanon</h3>
                 <p>AUB serves as the ideal setting for BEYMUN, reflecting its long-standing role in diplomacy and international affairs.
-                   With a rich history of producing influential diplomats, policymakers, and UN officials, AUB fosters a culture of debate and leadership.
+                   With a rich history of producing diplomats, policymakers and UN officials, AUB fosters a culture of debate and leadership.
                    Hosting BEYMUN at AUB ensures that delegates experience a conference rooted in the university’s legacy of diplomacy, preparing them to become the next generation of global leaders.</p>
               </div>
             </div>
@@ -167,7 +167,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-4">
+          <div class="col-lg-3 col-md-4 d-none d-md-block">
             <div class="venue-gallery">
               <a href="{{ url_for('static', filename='img/venue-gallery/venue-gallery-2.jpg') }}" class="glightbox" data-gall="venue-gallery">
                 <img src="{{ url_for('static', filename='img/venue-gallery/venue-gallery-2.jpg') }}" alt="" class="img-fluid">
@@ -175,7 +175,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-4">
+          <div class="col-lg-3 col-md-4 d-none d-md-block">
             <div class="venue-gallery">
               <a href="{{ url_for('static', filename='img/venue-gallery/venue-gallery-3.jpg') }}" class="glightbox" data-gall="venue-gallery">
                 <img src="{{ url_for('static', filename='img/venue-gallery/venue-gallery-3.jpg') }}" alt="" class="img-fluid">
@@ -183,7 +183,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-4">
+          <div class="col-lg-3 col-md-4 d-none d-md-block">
             <div class="venue-gallery">
               <a href="{{ url_for('static', filename='img/venue-gallery/venue-gallery-4.jpg') }}" class="glightbox" data-gall="venue-gallery">
                 <img src="{{ url_for('static', filename='img/venue-gallery/venue-gallery-4.jpg') }}" alt="" class="img-fluid">
@@ -191,30 +191,46 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-4">
+          <div id="mobileVenueCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+            <div class="carousel-inner venue-gallery">
+                <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='img/venue-gallery/venue-gallery-2.jpg') }}" class="d-block w-100 img-fluid" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/venue-gallery/venue-gallery-3.jpg') }}" class="d-block w-100 img-fluid" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/venue-gallery/venue-gallery-4.jpg') }}" class="d-block w-100 img-fluid" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/venue-gallery/venue-gallery-5.jpg') }}" class="d-block w-100 img-fluid" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mobileVenueCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mobileVenueCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="col-lg-6 col-md-12">
+            <div class="venue-gallery">
+              <a href="{{ url_for('static', filename='img/venue-gallery/venue-gallery-6.jpg') }}" class="glightbox" data-gall="venue-gallery">
+                <img src="{{ url_for('static', filename='img/venue-gallery/venue-gallery-6.jpg') }}" alt="" class="img-fluid">
+              </a>
+            </div>
+        </div>
+
+          <div class="col-lg-3 col-md-4 d-none d-md-block">
             <div class="venue-gallery">
               <a href="{{ url_for('static', filename='img/venue-gallery/venue-gallery-5.jpg') }}" class="glightbox" data-gall="venue-gallery">
                 <img src="{{ url_for('static', filename='img/venue-gallery/venue-gallery-5.jpg') }}" alt="" class="img-fluid">
               </a>
             </div>
           </div>
-
-          <div class="col-lg-6 col-md-12">
-            <div class="venue-gallery">
-              <a href="{{ url_for('static', filename='img/venue-gallery/venue-gallery-6.jpg') }}" class="glightbox" data-gall="venue-gallery">
-                <img src="{{ url_for('static', filename='img/venue-gallery/venue-gallery-6.jpg') }}" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-<!--          <div class="col-lg-3 col-md-4">-->
-<!--            <div class="venue-gallery">-->
-<!--              <a href="{{ url_for('static', filename='img/venue-gallery/venue-gallery-2.jpg') }}" class="glightbox" data-gall="venue-gallery">-->
-<!--                <img src="{{ url_for('static', filename='img/venue-gallery/venue-gallery-2.jpg') }}" alt="" class="img-fluid">-->
-<!--              </a>-->
-<!--            </div>-->
-<!--          </div>-->
-
         </div>
       </div>
 
