@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>{% block title %}BEYMUN 2025{% endblock %}</title>
-  <meta name="description" content="">
+  <title>{% block title %}BEYMUN 2025 | Model UN Conference in Beirut{% endblock %}</title>
+  <meta name="description" content="Beirut Model United Nations (BEYMUN) is Lebanon's prime Model UN conference that has been taking place annually at the American University of Beirut (AUB) for more than a decade.">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
@@ -47,7 +47,7 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li class="d-lg-none" style="border-bottom: #000"><a style="font-size: 28px!important; font-weight: 700; color: #712B32; border-bottom: #000">Index</a></li>
+          <li class="d-lg-none" style="border-bottom: #000"><a href="" style="font-size: 28px!important; font-weight: 700; color: #712B32; border-bottom: #000">Index</a></li>
         <hr>
           <li><a href="{{ url_for('home') }}" {% if request.endpoint == 'home' %}class="active"{% endif %}>Home<br></a></li>
           <li><a href="{{ url_for('about_us') }}" {% if request.endpoint == 'about_us' %}class="active"{% endif %}>About Us</a></li>
