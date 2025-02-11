@@ -1,6 +1,8 @@
 from flask import Flask, render_template, redirect, url_for, request, send_from_directory
+from flask_compress import Compress
 
 app = Flask(__name__, static_folder='static')
+Compress(app)
 
 @app.route('/')
 def home():

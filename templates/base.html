@@ -47,7 +47,7 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li style="border-bottom: #000"><a style="font-size: 28px!important; font-weight: 700; color: #712B32; border-bottom: #000">Index</a></li>
+          <li class="d-lg-none" style="border-bottom: #000"><a style="font-size: 28px!important; font-weight: 700; color: #712B32; border-bottom: #000">Index</a></li>
         <hr>
           <li><a href="{{ url_for('home') }}" {% if request.endpoint == 'home' %}class="active"{% endif %}>Home<br></a></li>
           <li><a href="{{ url_for('about_us') }}" {% if request.endpoint == 'about_us' %}class="active"{% endif %}>About Us</a></li>
@@ -56,9 +56,9 @@
           <li><a href="{{ url_for('beymun_2025') }}" {% if request.endpoint == 'beymun_2025' %}class="active"{% endif %}>BEYMUN 2025</a></li>
           <li><a id="mobile-register-btn" style="font-weight: 700; background: var(--accent-color)!important; margin-left: 20px" href="{{ url_for('register') }}" class="badge text-bg-dark">Register Now</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        <i class="mobile-nav-toggle d-lg-none bi bi-list"></i>
       </nav>
-      <a class="cta-btn d-none d-xl-block" href="{{ url_for('register') }}">Register Now</a>
+      <a class="cta-btn d-none d-lg-block" href="{{ url_for('register') }}">Register Now</a>
     </div>
   </header>
 
@@ -163,7 +163,7 @@
   <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
   <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
   <script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}" defer></script>
 
   <!-- Main JS File -->
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
