@@ -21,7 +21,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Dais Members</h2>
-        <p>Be part of a committee's dais as chair, co-chair...</p>
+{#        <p>Be part of a committee's dais as chair, co-chair...</p>#}
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up">
@@ -44,7 +44,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Delegates</h2>
-        <p>Register now and take your seat at the debate!</p>
+{#        <p>Register now and take your seat at the debate!</p>#}
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up">
@@ -55,12 +55,16 @@
               <li>National Delegates: <strong>USD 30</strong><br></li>
               <li>International delegates: <strong>USD 60</strong></li>
           </ul>
-          <p style="font-weight: 700">Note: Registration for delegates opens on Thursday, February 13th</p>
+          <p style="font-weight: 700">Note: Payment of the registration fee should be made in anticipation of filling the registration form, as the Whish receipt is to be attached.</p>
           <h4>Payment</h4>
-          <p>Payment can be made through the Wish app by searching for "Beymun AUB", or by looking for "Beymun AUB" in the "Sports & Events" section.<br>
-          <span style="font-weight: 700">Note: Make sure you are in the USD section of Wish.</span></p>
-          <p>We will soon release an update regarding alternative methods of payment, concerning international delegates, and delegates who can not use the Wish app.<br>As always, for any inquiry, do not hesitate to contact us at <a href="mailto:beymun@aub.edu.lb">beymun@aub.edu.lb</a>.</p>
+              <p>Payment can be made through the Whish app by searching for "Beymun AUB", or by looking for "Beymun AUB" in the "Sports & Events" section.<br>
+              <span style="font-weight: 700">Note: Make sure you are in the USD section of Whish.</span></p>
+              <p>We will soon release an update regarding alternative methods of payment, concerning international delegates, and delegates who can not use the Whish app.<br>As always, for any inquiry, do not hesitate to contact us at <a href="mailto:beymun@aub.edu.lb">beymun@aub.edu.lb</a>.</p>
+          <h4>Delegations</h4>
+            <p>In addition to each delegate filling the <a href="{{ url_for('delegate_regist') }}">form mentioned above</a>, delegates can choose to represent their school by letting an advisor fill the form at <a href="{{ url_for('skl_regist') }}">mun.org.lb{{ url_for('skl_regist') }}</a>.<br>
+            Advisors will have to also upload a spreadsheet containing the first, middle, and last names of the delegation's members, each in a separate column.</p>
+            <p style="font-weight: 700">Note: There is NO restriction on the number of delegates per delegation, however the maximum number of Advisors per delegation is two, with a main one and a secondary one.</p>
       </div>
-
     </section>
+    <h4 class="sub-heading text-center mb-5">Best of luck!</h4>
 {% endblock %}
