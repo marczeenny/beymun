@@ -1,12 +1,19 @@
 from flask import Flask, render_template, redirect, url_for, request, send_from_directory
 from flask_compress import Compress
+import csv
 
 app = Flask(__name__, static_folder='static')
 Compress(app)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    keys = ['id', 'q', 'a']
+    data_list = []
+    with open('data/faq.csv', newline='') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            data_list.append(dict(zip(keys, row)))
+    return render_template('index.html', data_list=data_list)
 
 
 @app.route('/about-us/')

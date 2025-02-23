@@ -222,79 +222,15 @@
           <div class="col-lg-10">
 
             <div class="faq-container">
-
-              <div class="faq-item faq-active">
-                <h3>Can I participate in BEYMUN even if I don't have previous MUN experience?</h3>
-                <div class="faq-content">
-                  <p>Yes, of course! Registered delegates will have two comprehensive training sessions to be familiar with MUN procedures before the final conference.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Is BEYMUN limited to AUB students?</h3>
-                <div class="faq-content">
-                  <p>No, BEYMUN welcomes all high school (including Grade 9) and university students.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Is BEYMUN for high school or university students?</h3>
-                <div class="faq-content">
-                  <p>Both! There are committees for high school students (including Grade 9) and university students separately, and there are committees that combine both.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>When does registration open?</h3>
-                <div class="faq-content">
-                  <p>Delegate registration opens on February 13. Keep an eye on our social media platforms for the announcement!</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>How can I register for BEYMUN 2025?</h3>
-                <div class="faq-content">
-                    <p>Please find the Delegate Registration form link in the <a href="{{ url_for('register') }}">registration</a> section of our website and on our social media platforms starting February 13.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>When is the deadline for registration?</h3>
-                <div class="faq-content">
-                  <p>The delegate registration form closes on March 13th, 2025 at 11:59 pm.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Can high school students be Dais members?</h3>
-                <div class="faq-content">
-                  <p>Only students who are in their last year of high school can apply for Dais member positions at BEYMUN 2025.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>How can I register as a Chair?</h3>
-                <div class="faq-content">
-                  <p>Please find the Dais Registration form link in the <a href="{{ url_for('register') }}">registration</a> section of our website and on our social media platforms. Please note that the form closes on February 24th, 2025 at 11:59 pm.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Are double delegations allowed?</h3>
-                <div class="faq-content">
-                  <p>Double delegations may be allowed in certain committees; for now, the only committee with confirmed double delegation is the Arab League Committee.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
+                {% for faq in data_list %}
+                    <div class="faq-item {% if faq.id == '1' %}faq-active{% endif %}">
+                        <h3>{{ faq.q }}</h3>
+                        <div class="faq-content">
+                            <p>{{ faq.a }}</p>
+                        </div>
+                        <i class="faq-toggle bi bi-chevron-right"></i>
+                    </div><!-- End Faq item-->
+                {% endfor %}
             </div>
 
           </div><!-- End Faq Column-->
