@@ -23,7 +23,13 @@ def about_us():
 
 @app.route('/team/')
 def team():
-    return render_template('team.html')
+    keys = ['name', 'position', 'img']
+    data_list = []
+    with open('data/team.csv', newline='') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            data_list.append(dict(zip(keys, row)))
+    return render_template('team.html', data_list=data_list)
 
 
 @app.route('/gallery/')
