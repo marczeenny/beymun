@@ -1732,6 +1732,17 @@ section,
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    line-height: 1.2;
+    @media (max-width: 768px) {
+      line-height: 1;
+    }
+}
+
+.member-container small {
+  font-size: 90%;
+  @media (min-width: 768px) {
+    font-size: 100%;
+  }
 }
 .team-container {
     position: relative;
