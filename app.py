@@ -62,5 +62,9 @@ def skl_regist():
     return redirect('https://docs.google.com/forms/d/e/1FAIpQLSeQehJsIliEddOHRXlAaDBJ9CPgn_ha5zXxM_-N9vNcjbmXAg/viewform?usp=header')
 
 
+@app.route('/int/')
+def mymun():
+    return redirect('https://mymun.com/conferences/beymun-2025')
+
 if __name__ == '__main__':
     app.run(debug=True)
