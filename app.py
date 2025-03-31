@@ -66,5 +66,11 @@ def skl_regist():
 def mymun():
     return redirect('https://mymun.com/conferences/beymun-2025')
 
+
+@app.route('/awards/')
+def awards():
+    return redirect('/static/Recognition guidelines.pdf/')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
