@@ -69,7 +69,7 @@ def mymun():
 
 @app.route('/awards/')
 def awards():
-    return redirect('/static/Recognition guidelines.pdf/')
+    return redirect(url_for('static', filename='Recognition-guidelines.pdf/'))
 
 
 if __name__ == '__main__':
