@@ -41,7 +41,7 @@ def gallery():
 def beymun_2025():
     keys = ['name', 'size', 'level', 'desc', 'topic', 'logo', 'chair1', 'chair1pic', 'chair2', 'chair2pic', 'chair3', 'chair3pic']
     data_list = []
-    with open('data/coms.csv', newline='') as file:
+    with open('data/coms.csv', encoding='utf-8', newline='') as file:
         reader = csv.reader(file)
         for row in reader:
             data_list.append(dict(zip(keys, row)))
