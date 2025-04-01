@@ -39,7 +39,13 @@ def gallery():
 
 @app.route('/beymun-2025/')
 def beymun_2025():
-    return render_template('beymun-2025.html')
+    keys = ['name', 'size', 'level', 'desc', 'topic', 'logo', 'chair1', 'chair1pic', 'chair2', 'chair2pic', 'chair3', 'chair3pic']
+    data_list = []
+    with open('data/coms.csv', newline='') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            data_list.append(dict(zip(keys, row)))
+    return render_template('beymun-2025.html', data_list=data_list)
 
 
 @app.route('/register/')
@@ -69,7 +75,7 @@ def mymun():
 
 @app.route('/awards/')
 def awards():
-    return redirect(url_for('static', filename='Recognition-guidelines.pdf/'))
+    return send_from_directory('static', 'Recognition-guidelines.pdf/')
 
 
 if __name__ == '__main__':
