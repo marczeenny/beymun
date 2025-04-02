@@ -1778,3 +1778,65 @@ section,
     color: white;
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
 }
+
+.custom-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #f8f9fa;
+}
+.left-img {
+  position: relative;
+  width: 50%;
+  min-height: 300px;
+  color: white;
+}
+
+.left-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.left-img .overlayComm {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 1;
+  padding-right: 2rem;
+}
+.right-content {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.field-row {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.people {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+.person {
+  text-align: center;
+}
+.person img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .left-img, .right-content {
+    width: 100%;
+  }
+}
